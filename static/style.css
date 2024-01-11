@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-list li {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f2f2f2;
+    display: inline-block;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu-list li a:hover {
+    color: #017572;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.flex-item {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.flex-item h2 {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 200px; /* You can adjust the height as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* Disable resizing of the textarea */
+    font-family: monospace; /* Makes the text easier to read */
+    white-space: pre; /* Keeps the formatting for spaces and line breaks */
+    overflow-y: auto; /* Add vertical scrolling */
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left-column, .right-column {
+    width: 48%;
+}
+
+.collection-container, .decklist-container, .missing-container, .present-container {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="file"], input[type="text"], textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"], button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #004494;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.table-container {
+    height: calc(100vh - 60px); /* Adjusted height to account for header */
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.home-button {
+    background-color: #0056b3;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #004494;
+}
+
+/* Add to your existing style.css */
+
+.collection-container, .decklist-container, .missing-container, .present-container {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    height: 200px; /* Adjust height as needed */
+    overflow-y: scroll;
+}
+
+.collection-table, .decklist-table, .missing-table, .present-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.collection-table td, .collection-table th,
+.decklist-table td, .decklist-table th,
+.missing-table td, .missing-table th,
+.present-table td, .present-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.collection-table th, .decklist-table th, .missing-table th, .present-table th {
+    background-color: #f4f4f4;
+}
+.back-button {
+    margin: 20px;
+}
+
+.back-button a {
+    color: #017572;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-button a:hover {
+    text-decoration: underline;
+}
+
+

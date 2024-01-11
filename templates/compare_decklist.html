@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Compare Decklist</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Compare Decklist</h1>
+        <div class="back-button">
+            <a href="{{ url_for('index') }}">&larr; Back to Home</a>
+        </div>
+        <form action="{{ url_for('compare_decklist') }}" method="post" enctype="multipart/form-data">
+            <textarea name="decklist" rows="10" placeholder="Enter your decklist here, one card per line with quantity" required></textarea>
+            <input type="file" name="collection_file" required>
+            <button type="submit">Compare</button>
+        </form>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h2>Your Collection</h2>
+                <textarea readonly>{{ collection_text }}</textarea>
+            </div>
+            <div class="flex-item">
+                <h2>Your Decklist</h2>
+                <textarea readonly>{{ decklist_text }}</textarea>
+            </div>
+            <div class="flex-item">
+                <h2>Missing Cards</h2>
+                <textarea readonly>{{ missing_text }}</textarea>
+            </div>
+            <div class="flex-item">
+                <h2>Cards in Collection</h2>
+                <textarea readonly>{{ owned_text }}</textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

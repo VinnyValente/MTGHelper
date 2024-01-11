@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MTG Collection Helper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">MTG Collection Helper</a>
+    </div>
+    <div class="main-content">
+        <ul class="menu-list">
+            <li><a href="{{ url_for('upload_collection') }}">Upload Collection</a></li>
+            <li><a href="{{ url_for('compare_decklist') }}">Compare Decklist</a></li>
+            <li><a href="{{ url_for('convert_csv') }}">Convert CSV</a></li>
+            <li><a href="{{ url_for('compare_csvs') }}">Compare CSVs</a></li>
+        </ul>
+    </div>
+</body>
+</html>

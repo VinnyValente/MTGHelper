@@ -1,0 +1,20 @@
+<!-- templates/compare_csvs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Compare CSVs</title>
+</head>
+<body>
+    <h1>Compare Two Manabox CSV Files</h1>
+    <div class="back-button">
+        <a href="{{ url_for('index') }}">&larr; Back to Home</a>
+    </div>
+    <form action="{{ url_for('compare_csvs') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file1" required>
+        <input type="file" name="file2" required>
+        <input type="submit" value="Compare">
+    </form>
+</body>
+</html>
