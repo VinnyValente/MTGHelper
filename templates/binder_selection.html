@@ -1,0 +1,18 @@
+<!-- templates/binder_selection.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Select Binders to Exclude</title>
+</head>
+<body>
+    <h1>Select Binders to Exclude</h1>
+    <form method="post" action="">
+        {% for binder in binder_names %}
+            <input type="checkbox" name="binder" value="{{ binder }}">{{ binder }}<br>
+        {% endfor %}
+        <input type="submit" value="Generate Filtered CSV">
+    </form>
+</body>
+</html>
