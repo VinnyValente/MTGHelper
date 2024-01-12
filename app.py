@@ -19,17 +19,17 @@ def index():
     return render_template('index.html')
 
 
-#@app.route('/upload_collection', methods=['GET', 'POST'])
-#def upload_collection():
-#    if request.method == 'POST':
-#        file = request.files['collection_file']
-#        if file and allowed_file(file.filename):
-#            filename = secure_filename(file.filename)
-#            file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-#            file.save(file_path)
-#            flash('File successfully uploaded')
-#            return redirect(url_for('process_collection', filename=filename))
-#    return render_template('upload_collection.html')
+@app.route('/upload_collection', methods=['GET', 'POST'])
+def upload_collection():
+    if request.method == 'POST':
+        file = request.files['collection_file']
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(file_path)
+            flash('File successfully uploaded')
+            return redirect(url_for('process_collection', filename=filename))
+    return render_template('upload_collection.html')
 
 
 @app.route('/process_collection/<filename>')
