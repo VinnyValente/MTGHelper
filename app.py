@@ -3,10 +3,9 @@ import pandas as pd
 from flask import Flask, render_template, request, flash, redirect, url_for, send_file
 from werkzeug.utils import secure_filename
 
-from config import SECRET_KEY
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = SECRET_KEY
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'default-secret-key')
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
 ALLOWED_EXTENSIONS = {'csv'}
